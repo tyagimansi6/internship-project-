@@ -1,0 +1,155 @@
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.glass-panel {
+    background: rgba(30, 22, 38, 0.4);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(173, 163, 255, 0.1);
+}
+
+.noise-bg {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCUPQs7dfXnoFgEORCCYeOtAEcnzKHCHq8LpeX8BFmS8tny_oZvhYhO7p9fIYV0dXvWymuWSGJenUHXl4kL9fgyLzxnXwItkRi88ItPu5oVvWCLlVaPuLzXYVbLvQ0qg1Xat8GiL5txAwvlRWZR-zlHvnl_FoLnYtSMcecyA9by0dz2u5v6rj0BfD5-7dY8SO1FOKIgMNOlgfw6hB3p-I4L-KBZxWYUSbsLb_kFprNou8yPNii3D9BRtWcRXUnThysXsnpKE_JPemE);
+    opacity: 0.03;
+}
+
+.text-gradient-primary {
+    background: linear-gradient(to right, #ada3ff, #e1ccfa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes forge-slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes forge-slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes forge-pulse-active {
+    0% {
+        box-shadow: inset 0 0 0 0 rgba(173, 163, 255, 0.4);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: inset 0 0 0 8px rgba(173, 163, 255, 0);
+        transform: scale(1.1);
+    }
+    100% {
+        box-shadow: inset 0 0 0 0 rgba(173, 163, 255, 0);
+        transform: scale(1);
+    }
+}
+
+@keyframes icon-pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.forge-step {
+    opacity: 0.5;
+    transition: opacity 0.500ms ease-out;
+}
+
+.forge-step[data-active] {
+    opacity: 1;
+}
+
+.forge-step .forge-icon {
+    animation: none;
+}
+
+.forge-step[data-active] .forge-icon {
+    animation: icon-pulse 0.6s ease-out 1;
+}
+
+.forge-step .forge-pulse-ring {
+    animation: none;
+}
+
+.forge-step[data-active] .forge-pulse-ring {
+    animation: forge-pulse-active 0.8s ease-out 1;
+}
+
+@media (max-width: 768px) {
+    .forge-step {
+        animation: forge-slide-in-left 0.6s ease-out forwards;
+    }
+
+    .forge-step[data-active] {
+        animation: forge-slide-in-left 0.6s ease-out forwards;
+    }
+}
+
+@media (min-width: 769px) {
+    .forge-step:nth-child(odd) {
+        animation: forge-slide-in-left 0.6s ease-out forwards;
+    }
+
+    .forge-step:nth-child(even) {
+        animation: forge-slide-in-right 0.6s ease-out forwards;
+    }
+
+    .forge-step[data-active]:nth-child(odd) {
+        animation: forge-slide-in-left 0.6s ease-out forwards;
+    }
+
+    .forge-step[data-active]:nth-child(even) {
+        animation: forge-slide-in-right 0.6s ease-out forwards;
+    }
+}
+
+/* Auth Modal and Chat Transitions */
+.modal-overlay {
+    backdrop-filter: blur(8px);
+}
+
+.chatbot-bubble {
+    box-shadow: 0 0 15px rgba(173, 163, 255, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.chatbot-bubble:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(173, 163, 255, 0.5);
+}
+
+.chat-message {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
