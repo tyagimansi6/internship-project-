@@ -90,9 +90,9 @@
 <body class="bg-background text-on-background font-body selection:bg-primary/30">
     <!-- Top Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-[#1f1529]/80 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(49,27,146,0.1)]">
-        <div class="max-w-7xl mx-auto flex justify-between items-center px-8 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 md:px-8 py-3 md:py-4">
             <a href="#"
-                class="flex items-center gap-3 text-2xl font-black tracking-tighter text-[#ada3ff] font-headline hover:opacity-80 transition-opacity">
+                class="flex items-center gap-2 sm:gap-3 text-lg sm:text-2xl font-black tracking-tighter text-[#ada3ff] font-headline hover:opacity-80 transition-opacity">
                 <div
                     class="relative flex items-center justify-center p-1.5 bg-white/5 border border-white/10 rounded-xl shadow-inner backdrop-blur-sm group hover:bg-white/10 transition-colors">
                     <img src="logo.png" alt="Pitchsap Logo"
@@ -120,7 +120,7 @@
                     Started</button>
             </div>
             <div id="nav-user-buttons" class="hidden items-center space-x-3">
-                <span class="hidden" id="user-name-display">Founder</span>
+                <span class="hidden md:block text-[#e1ccfa]/90 font-medium font-headline bg-white/5 px-3 py-1.5 rounded-lg border border-white/10" id="user-name-display">Founder</span>
                 <button id="logout-btn"
                     class="text-error font-headline font-bold px-4 py-2 hover:bg-error/10 rounded-xl transition-all flex items-center gap-1.5">
                     <span class="material-symbols-outlined text-sm">logout</span> Logout
@@ -130,7 +130,7 @@
                     class="material-symbols-outlined text-3xl">menu</span></button>
         </div>
         <div id="mobile-menu"
-            class="hidden md:hidden bg-surface-container-high/95 backdrop-blur-xl border-t border-outline-variant/20 flex-col pt-4 pb-6 px-8 absolute top-[100%] left-0 w-full shadow-2xl z-40">
+            class="hidden md:hidden bg-surface-container-high/95 backdrop-blur-xl border-t border-outline-variant/20 flex-col pt-4 pb-6 px-4 sm:px-6 absolute top-[100%] left-0 w-full shadow-2xl z-40">
             <a class="block py-3 font-headline font-bold text-[#e1ccfa]/70" href="#product">Product</a>
             <a class="block py-3 font-headline font-bold text-[#e1ccfa]/70" href="#expert">Expert Feedback</a>
             <a class="block py-3 font-headline font-bold text-[#e1ccfa]/70" href="#community">Community</a>
@@ -144,7 +144,7 @@
         </div>
     </nav>
     <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 overflow-hidden min-h-screen flex items-center">
+    <section class="relative pt-20 sm:pt-24 md:pt-32 pb-12 sm:pb-16 md:pb-20 overflow-hidden min-h-full sm:min-h-screen flex items-center">
         <!-- Background Atmosphere -->
         <div class="absolute inset-0 z-0">
             <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/10 blur-[120px] rounded-full"></div>
@@ -152,34 +152,34 @@
             </div>
             <div class="absolute inset-0 noise-bg"></div>
         </div>
-        <div class="max-w-7xl mx-auto px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-6 space-y-6 lg:space-y-8 relative z-30">
-                <h1 class="font-headline font-extrabold text-on-surface drop-shadow-lg flex flex-col">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 md:gap-12 items-center">
+            <div class="lg:col-span-6 space-y-4 sm:space-y-6 lg:space-y-8 relative z-30">
+                <h1 class="font-headline font-extrabold text-on-surface drop-shadow-lg flex flex-col mt-2">
                     <span class="text-[clamp(3rem,6vw,4.5rem)] tracking-tight leading-[1] mb-1 opacity-90">Ideas are
                         wild.</span>
                     <span
                         class="text-[clamp(3.5rem,8vw,5.5rem)] tracking-normal leading-[0.85] text-gradient-primary">We
                         make them work.</span>
                 </h1>
-                <p class="text-lg md:text-xl text-on-surface-variant max-w-lg leading-snug font-medium">
+                <p class="text-base sm:text-lg md:text-xl text-on-surface-variant max-w-lg leading-snug font-medium">
                     Turn raw ideas into validated, market-ready ventures with AI and real signals.
                 </p>
-                <div class="flex flex-col sm:flex-row items-center space-y-5 sm:space-y-0 sm:space-x-8 pt-6">
+                <div class="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-6 pt-4 sm:pt-6">
                     <button
-                        class="w-full sm:w-auto px-8 py-4 bg-primary text-on-primary font-headline font-extrabold rounded-xl shadow-[0_0_30px_rgba(173,163,255,0.4)] hover:shadow-[0_0_50px_rgba(173,163,255,0.6)] transition-all hover:-translate-y-1 relative overflow-hidden group login-btn">
+                        class="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base bg-primary text-on-primary font-headline font-extrabold rounded-xl shadow-[0_0_30px_rgba(173,163,255,0.4)] hover:shadow-[0_0_50px_rgba(173,163,255,0.6)] transition-all hover:-translate-y-1 relative overflow-hidden group login-btn">
                         <div
                             class="absolute inset-0 bg-white/20 blur-md rounded-xl opacity-0 group-hover:opacity-100 transition-opacity">
                         </div>
                         <span class="relative z-10">Start Validating Free</span>
                     </button>
                     <button
-                        class="w-full sm:w-auto px-8 py-4 border border-outline-variant/50 hover:border-primary/50 text-on-surface font-headline font-bold rounded-xl flex items-center justify-center space-x-2 group transition-all hover:bg-primary/5 shadow-[0_0_15px_rgba(0,0,0,0)] hover:shadow-[0_0_20px_rgba(173,163,255,0.15)]">
+                        class="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base border border-outline-variant/50 hover:border-primary/50 text-on-surface font-headline font-bold rounded-xl flex items-center justify-center space-x-2 group transition-all hover:bg-primary/5 shadow-[0_0_15px_rgba(0,0,0,0)] hover:shadow-[0_0_20px_rgba(173,163,255,0.15)]">
                         <span>Watch Demo</span>
                         <span
                             class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
                     </button>
                 </div>
-                <div class="flex items-center gap-4 text-sm text-outline font-medium pt-12">
+                <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 text-xs sm:text-sm text-outline font-medium pt-8 sm:pt-12">
                     <div class="flex -space-x-2">
                         <img class="w-8 h-8 rounded-full border-2 border-background"
                             data-alt="professional portrait of a young startup founder in a modern office environment"
@@ -196,7 +196,7 @@
             </div>
             <!-- Immersive Hero Visual -->
             <div
-                class="lg:col-span-6 relative h-[600px] flex items-center justify-center [perspective:1200px] mt-10 lg:mt-0">
+                class="lg:col-span-6 relative h-[400px] sm:h-[500px] md:h-[600px] flex items-center justify-center [perspective:1200px] mt-6 sm:mt-8 lg:mt-0">
 
                 <!-- Background Effects -->
                 <div
@@ -213,7 +213,7 @@
                     </div>
 
                     <!-- Main Central Dashboard Card -->
-                    <div class="relative z-20 rounded-[2rem] p-8 border border-white/10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9),0_0_50px_rgba(173,163,255,0.2),inset_0_1px_0_rgba(255,255,255,0.2)] backdrop-blur-2xl bg-[#322642]/75 overflow-hidden"
+                    <div class="relative z-20 rounded-2xl sm:rounded-3xl md:rounded-[2rem] p-4 sm:p-6 md:p-8 border border-white/10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9),0_0_50px_rgba(173,163,255,0.2),inset_0_1px_0_rgba(255,255,255,0.2)] backdrop-blur-2xl bg-[#322642]/75 overflow-hidden"
                         style="animation: float 6s ease-in-out infinite;">
 
                         <div class="relative z-10">
@@ -348,10 +348,10 @@
             class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/10 blur-[150px] rounded-full pointer-events-none mix-blend-screen">
         </div>
 
-        <div class="max-w-6xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-32">
-                <h2 class="text-4xl md:text-5xl font-headline font-black tracking-tight mb-4">The Validation Forge</h2>
-                <p class="text-on-surface-variant max-w-2xl mx-auto text-lg">Multi-stage verification that strips away
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+            <div class="text-center mb-16 sm:mb-24 md:mb-32">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-headline font-black tracking-tight mb-3 sm:mb-4">The Validation Forge</h2>
+                <p class="text-on-surface-variant max-w-2xl mx-auto text-sm sm:text-base md:text-lg">Multi-stage verification that strips away
                     bias. Watch your idea transform as you scroll.</p>
             </div>
 
@@ -367,7 +367,7 @@
                     id="progress-line" style="height: 0%;"></div>
 
                 <!-- Steps Container -->
-                <div class="space-y-24 md:space-y-32 relative">
+                <div class="space-y-16 sm:space-y-20 md:space-y-24 lg:space-y-32 relative">
 
                     <!-- Step 1 - Left aligned -->
                     <div class="forge-step group relative md:w-[42%] md:mr-auto" data-step="0">
