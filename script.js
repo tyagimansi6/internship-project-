@@ -67,6 +67,15 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenu.classList.toggle('hidden');
             mobileMenu.classList.toggle('flex');
         });
+
+        // Auto-close menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
     }
     
     // ---------------------------------------------------------
@@ -110,14 +119,20 @@ document.addEventListener('DOMContentLoaded', () => {
         if (userState.isLoggedIn) {
             if(chatbotContainer) chatbotContainer.classList.remove('hidden');
             if(navAuthButtons) {
+                navAuthButtons.classList.add('!hidden');
+                navAuthButtons.classList.remove('md:flex');
                 navAuthButtons.style.setProperty('display', 'none', 'important');
             }
             if(navUserButtons) {
                 navUserButtons.classList.remove('hidden');
-                navUserButtons.classList.add('flex');
-                navUserButtons.style.display = 'flex';
+                navUserButtons.classList.add('hidden', 'md:flex');
+                navUserButtons.style.display = '';
             }
-            if(userNameDisplay) userNameDisplay.textContent = userState.username || 'Founder';
+            if(userNameDisplay) {
+                userNameDisplay.textContent = userState.username || 'Founder';
+                userNameDisplay.classList.remove('hidden');
+                userNameDisplay.classList.add('block');
+            }
             
             if (mobileLoginBtn) mobileLoginBtn.style.display = 'none';
             if (mobileLogoutBtn) mobileLogoutBtn.style.display = 'block';
@@ -125,11 +140,13 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             if(chatbotContainer) chatbotContainer.classList.add('hidden');
             if(navAuthButtons) {
+                navAuthButtons.classList.remove('!hidden');
+                navAuthButtons.classList.add('md:flex');
                 navAuthButtons.style.display = '';
             }
             if(navUserButtons) {
+                navUserButtons.classList.remove('md:flex');
                 navUserButtons.classList.add('hidden');
-                navUserButtons.classList.remove('flex');
                 navUserButtons.style.display = 'none';
             }
             handleChatbotToggle(false); // Close chat if open
@@ -143,6 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
         loginBtns.forEach(btn => btn.addEventListener('click', () => {
              authModal.classList.remove('hidden');
              authModal.classList.add('flex');
+             // Close mobile menu when opening auth modal
              if(mobileMenu) {
                  mobileMenu.classList.add('hidden');
                  mobileMenu.classList.remove('flex');
