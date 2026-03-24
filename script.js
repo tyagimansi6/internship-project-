@@ -322,7 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let htmlResponse = false;
 
         if (msg.includes('hello') || msg.includes('hi') || msg.includes('hey')) {
-            response = `Hello! I'm Forge AI. How can I assist with your startup validation today?`;
+            response = `Hello! I'm Pitchsap Bot. How can I assist with your startup validation today?`;
             options = ["Validate my idea", "Check Pricing", "How does this work?"];
         } else if(msg.includes('pricing') || msg.includes('cost')) {
             response = `We have three tiers:<br><br>• <b>Spark:</b> $0/mo (Entry)<br>• <b>Alpha:</b> $49/mo (Pro)<br>• <b>Nebula:</b> $199/mo (Enterprise)<br><br>The Forge highly recommends the Alpha tier!`;

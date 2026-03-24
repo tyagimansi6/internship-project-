@@ -28,11 +28,11 @@
                         "inverse-primary": "#5c4ebe",
                         "on-secondary-fixed-variant": "#5c4b71",
                         "on-primary-fixed-variant": "#280b8a",
-                        "surface-dim": "#120c18",
+                        "surface-dim": "#1f1529",
                         "on-primary": "#2a108c",
                         "on-secondary": "#524268",
                         "surface-tint": "#ada3ff",
-                        "surface-container-highest": "#2b2234",
+                        "surface-container-highest": "#3a2b4b",
                         "error-dim": "#d73357",
                         "tertiary-dim": "#e7c3ed",
                         "on-secondary-fixed": "#3e2f53",
@@ -45,7 +45,7 @@
                         "on-error-container": "#ffb2b9",
                         "tertiary": "#fde3ff",
                         "on-surface-variant": "#b2a7b9",
-                        "surface-container-high": "#251c2d",
+                        "surface-container-high": "#322642",
                         "error-container": "#a70138",
                         "on-secondary-container": "#ddc8f5",
                         "surface-bright": "#32283c",
@@ -53,25 +53,25 @@
                         "inverse-surface": "#fff7fe",
                         "outline-variant": "#4d4553",
                         "on-tertiary-fixed": "#4c3253",
-                        "on-primary-fixed": "#000000",
+                        "on-primary-fixed": "#15101c",
                         "error": "#ff6e84",
-                        "surface-variant": "#2b2234",
+                        "surface-variant": "#3a2b4b",
                         "primary-container": "#9f92ff",
                         "inverse-on-surface": "#5b5261",
                         "on-error": "#490013",
                         "primary-fixed": "#9f92ff",
-                        "surface-container-lowest": "#000000",
-                        "surface-container-low": "#17101e",
+                        "surface-container-lowest": "#15101c",
+                        "surface-container-low": "#241a2f",
                         "secondary-container": "#4f4065",
                         "secondary": "#e1ccfa",
                         "outline": "#7c7282",
-                        "background": "#120c18",
-                        "surface": "#120c18",
+                        "background": "#1f1529",
+                        "surface": "#1f1529",
                         "on-tertiary-fixed-variant": "#6a4e71",
                         "tertiary-container": "#f5d1fb",
                         "secondary-fixed": "#e1ccfa",
                         "tertiary-fixed-dim": "#e7c3ed",
-                        "surface-container": "#1e1626",
+                        "surface-container": "#2b2038",
                         "on-tertiary-container": "#604567"
                     },
                     fontFamily: {
@@ -89,9 +89,18 @@
 
 <body class="bg-background text-on-background font-body selection:bg-primary/30">
     <!-- Top Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-[#120c18]/80 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(49,27,146,0.1)]">
+    <nav class="fixed top-0 w-full z-50 bg-[#1f1529]/80 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(49,27,146,0.1)]">
         <div class="max-w-7xl mx-auto flex justify-between items-center px-8 py-4">
-            <div class="text-2xl font-black tracking-tighter text-[#ada3ff] font-headline">Pitchsap</div>
+            <a href="#"
+                class="flex items-center gap-3 text-2xl font-black tracking-tighter text-[#ada3ff] font-headline hover:opacity-80 transition-opacity">
+                <div
+                    class="relative flex items-center justify-center p-1.5 bg-white/5 border border-white/10 rounded-xl shadow-inner backdrop-blur-sm group hover:bg-white/10 transition-colors">
+                    <img src="logo.png" alt="Pitchsap Logo"
+                        class="h-8 w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform"
+                        onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-symbols-outlined text-primary text-2xl\'>rocket_launch</span>'" />
+                </div>
+                <span>Pitchsap</span>
+            </a>
             <div class="hidden md:flex items-center space-x-8">
                 <a class="font-headline font-bold tracking-tight text-[#e1ccfa]/70 hover:text-[#e1ccfa] transition-colors"
                     href="#product">Product</a>
@@ -110,10 +119,12 @@
                     class="bg-primary text-on-primary font-headline font-bold px-6 py-2 rounded-xl hover:scale-105 active:scale-95 transition-all login-btn">Get
                     Started</button>
             </div>
-            <div id="nav-user-buttons" class="hidden items-center space-x-4">
-                <span class="text-white text-sm font-bold" id="user-name-display">Founder</span>
+            <div id="nav-user-buttons" class="hidden items-center space-x-3">
+                <span class="hidden" id="user-name-display">Founder</span>
                 <button id="logout-btn"
-                    class="text-error font-headline font-bold px-4 py-2 hover:bg-error/10 rounded-xl transition-all">Logout</button>
+                    class="text-error font-headline font-bold px-4 py-2 hover:bg-error/10 rounded-xl transition-all flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-sm">logout</span> Logout
+                </button>
             </div>
             <button id="mobile-menu-btn" class="md:hidden text-[#e1ccfa] p-2 focus:outline-none"><span
                     class="material-symbols-outlined text-3xl">menu</span></button>
@@ -202,7 +213,7 @@
                     </div>
 
                     <!-- Main Central Dashboard Card -->
-                    <div class="relative z-20 rounded-[2rem] p-8 border border-white/10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9),0_0_50px_rgba(173,163,255,0.2),inset_0_1px_0_rgba(255,255,255,0.2)] backdrop-blur-2xl bg-[#251c2d]/75 overflow-hidden"
+                    <div class="relative z-20 rounded-[2rem] p-8 border border-white/10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9),0_0_50px_rgba(173,163,255,0.2),inset_0_1px_0_rgba(255,255,255,0.2)] backdrop-blur-2xl bg-[#322642]/75 overflow-hidden"
                         style="animation: float 6s ease-in-out infinite;">
 
                         <div class="relative z-10">
@@ -217,7 +228,8 @@
                                         class="text-2xl lg:text-3xl font-headline font-black text-on-surface leading-tight mb-3">
                                         Your idea deserves momentum.</h3>
                                     <p class="text-sm text-on-surface-variant leading-relaxed">
-                                        Pitchsap helps you refine, validate, and move forward with confidence through expert guidance, AI insights, and real founder feedback.
+                                        Pitchsap helps you refine, validate, and move forward with confidence through
+                                        expert guidance, AI insights, and real founder feedback.
                                     </p>
                                 </div>
                             </div>
@@ -273,7 +285,7 @@
                     </div>
 
                     <!-- Secondary Card 1: AI Insight (Top right, overlapping main and text space slightly) -->
-                    <div class="absolute -top-12 -left-12 lg:-left-24 z-30 rounded-2xl border border-secondary/30 shadow-2xl backdrop-blur-xl bg-[#1e1626]/90 p-4 transform rotate-[-8deg] translate-z-[50px]"
+                    <div class="absolute -top-12 -left-12 lg:-left-24 z-30 rounded-2xl border border-secondary/30 shadow-2xl backdrop-blur-xl bg-[#2b2038]/90 p-4 transform rotate-[-8deg] translate-z-[50px]"
                         style="animation: float 7s ease-in-out infinite 1s;">
                         <div class="flex items-center space-x-3">
                             <div class="p-2 bg-secondary/20 rounded-xl"><span
@@ -292,7 +304,7 @@
                     </div>
 
                     <!-- Secondary Card 2: Signal Count (Bottom right, partially off-screen effect) -->
-                    <div class="absolute -bottom-16 -right-12 md:-right-24 z-0 rounded-2xl border border-primary/20 shadow-[0_20px_40px_rgba(0,0,0,0.8)] backdrop-blur-md bg-[#2b2234]/80 p-5 transform rotate-[12deg] translate-z-[-40px] opacity-90 scale-90"
+                    <div class="absolute -bottom-16 -right-12 md:-right-24 z-0 rounded-2xl border border-primary/20 shadow-[0_20px_40px_rgba(0,0,0,0.8)] backdrop-blur-md bg-[#3a2b4b]/80 p-5 transform rotate-[12deg] translate-z-[-40px] opacity-90 scale-90"
                         style="animation: float 5s ease-in-out infinite 0.5s;">
                         <div class="flex items-center space-x-4">
                             <div class="relative w-14 h-14 flex items-center justify-center flex-shrink-0">
@@ -601,7 +613,8 @@
             </div>
 
             <!-- Medium Card : Expert Loop (Perspective Card) -->
-            <div id="expert" class="md:col-span-4 md:row-span-2 rounded-[2rem] relative group [perspective:1000px] scroll-mt-32">
+            <div id="expert"
+                class="md:col-span-4 md:row-span-2 rounded-[2rem] relative group [perspective:1000px] scroll-mt-32">
                 <div
                     class="absolute inset-0 glass-panel rounded-[2rem] border border-outline-variant/30 transition-transform duration-500 group-hover:[transform:rotateY(-5deg)_rotateX(5deg)] shadow-xl">
                 </div>
@@ -710,7 +723,7 @@
         </div>
     </section>
     <!-- See Pitchsap in Action -->
-    <section class="py-32 relative overflow-hidden bg-[#0d0714] border-y border-outline-variant/10">
+    <section class="py-32 relative overflow-hidden bg-[#1e112d] border-y border-outline-variant/10">
         <!-- Ambient Base Beam -->
         <div
             class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-1/2 bg-gradient-to-t from-primary/20 to-transparent blur-[100px] pointer-events-none">
@@ -817,26 +830,45 @@
         </div>
     </section>
     <!-- Community Section -->
-    <section id="community" class="py-32 relative overflow-hidden bg-surface-container-low/50 border-y border-outline-variant/10 scroll-mt-10">
+    <section id="community"
+        class="py-32 relative overflow-hidden bg-surface-container-low/50 border-y border-outline-variant/10 scroll-mt-10">
         <div class="max-w-[85rem] mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
-                <h2 class="text-4xl md:text-5xl font-headline font-black tracking-tight mb-6">Built by founders,<br>for founders.</h2>
-                <p class="text-on-surface-variant text-lg mb-8 leading-relaxed">Join a private network of 2,400+ visionary builders. Exchange beta tests, gather early feedback, and find your next co-founder in a signal-high, noise-low environment.</p>
-                <button class="px-8 py-4 bg-secondary text-surface font-headline font-bold rounded-xl hover:bg-secondary-fixed transition-colors flex items-center gap-2">
+                <h2 class="text-4xl md:text-5xl font-headline font-black tracking-tight mb-6">Built by founders,<br>for
+                    founders.</h2>
+                <p class="text-on-surface-variant text-lg mb-8 leading-relaxed">Join a private network of 2,400+
+                    visionary builders. Exchange beta tests, gather early feedback, and find your next co-founder in a
+                    signal-high, noise-low environment.</p>
+                <button
+                    class="px-8 py-4 bg-secondary text-surface font-headline font-bold rounded-xl hover:bg-secondary-fixed transition-colors flex items-center gap-2">
                     Join Discord <span class="material-symbols-outlined text-sm">arrow_forward</span>
                 </button>
             </div>
-            <div class="relative h-[400px] rounded-3xl border border-outline-variant/20 bg-[#12081e]/80 overflow-hidden flex items-center justify-center shadow-2xl glass-panel group">
-                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,theme(colors.secondary/0.1)_0%,transparent_70%)] group-hover:bg-[radial-gradient(ellipse_at_center,theme(colors.secondary/0.2)_0%,transparent_70%)] transition-colors duration-700"></div>
-                
+            <div
+                class="relative h-[400px] rounded-3xl border border-outline-variant/20 bg-[#200f36]/80 overflow-hidden flex items-center justify-center shadow-2xl glass-panel group">
+                <div
+                    class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,theme(colors.secondary/0.1)_0%,transparent_70%)] group-hover:bg-[radial-gradient(ellipse_at_center,theme(colors.secondary/0.2)_0%,transparent_70%)] transition-colors duration-700">
+                </div>
+
                 <div class="relative w-full h-full flex items-center justify-center">
-                    <div class="absolute w-64 h-64 border border-secondary/20 rounded-full animate-[spin_20s_linear_infinite]"></div>
-                    <div class="absolute w-40 h-40 border border-secondary/40 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
-                    <span class="material-symbols-outlined text-6xl text-secondary drop-shadow-[0_0_15px_theme(colors.secondary)] animate-pulse">forum</span>
-                    
-                    <div class="absolute w-12 h-12 rounded-full overflow-hidden shadow-[0_0_15px_theme(colors.primary/40)] animate-[spin_10s_linear_infinite] [transform-origin:120px_120px] border-2 border-primary"><img src="https://i.pravatar.cc/100?img=12" class="w-full h-full object-cover"></div>
-                    <div class="absolute w-10 h-10 rounded-full overflow-hidden shadow-[0_0_15px_theme(colors.tertiary/40)] animate-[spin_15s_linear_infinite_reverse] [transform-origin:-100px_-80px] border-2 border-tertiary"><img src="https://i.pravatar.cc/100?img=43" class="w-full h-full object-cover"></div>
-                    <div class="absolute w-8 h-8 rounded-full overflow-hidden shadow-[0_0_12px_theme(colors.green.400/40)] animate-[spin_12s_linear_infinite] [transform-origin:-90px_100px] border-2 border-green-400"><img src="https://i.pravatar.cc/100?img=65" class="w-full h-full object-cover"></div>
+                    <div
+                        class="absolute w-64 h-64 border border-secondary/20 rounded-full animate-[spin_20s_linear_infinite]">
+                    </div>
+                    <div
+                        class="absolute w-40 h-40 border border-secondary/40 rounded-full animate-[spin_15s_linear_infinite_reverse]">
+                    </div>
+                    <span
+                        class="material-symbols-outlined text-6xl text-secondary drop-shadow-[0_0_15px_theme(colors.secondary)] animate-pulse">forum</span>
+
+                    <div
+                        class="absolute w-12 h-12 rounded-full overflow-hidden shadow-[0_0_15px_theme(colors.primary/40)] animate-[spin_10s_linear_infinite] [transform-origin:120px_120px] border-2 border-primary">
+                        <img src="https://i.pravatar.cc/100?img=12" class="w-full h-full object-cover"></div>
+                    <div
+                        class="absolute w-10 h-10 rounded-full overflow-hidden shadow-[0_0_15px_theme(colors.tertiary/40)] animate-[spin_15s_linear_infinite_reverse] [transform-origin:-100px_-80px] border-2 border-tertiary">
+                        <img src="https://i.pravatar.cc/100?img=43" class="w-full h-full object-cover"></div>
+                    <div
+                        class="absolute w-8 h-8 rounded-full overflow-hidden shadow-[0_0_12px_theme(colors.green.400/40)] animate-[spin_12s_linear_infinite] [transform-origin:-90px_100px] border-2 border-green-400">
+                        <img src="https://i.pravatar.cc/100?img=65" class="w-full h-full object-cover"></div>
                 </div>
             </div>
         </div>
@@ -892,7 +924,7 @@
                     Most Popular
                 </div>
 
-                <div class="bg-[#12081e] h-full rounded-[2.4rem] p-10 flex flex-col relative overflow-hidden">
+                <div class="bg-[#200f36] h-full rounded-[2.4rem] p-10 flex flex-col relative overflow-hidden">
                     <!-- Inner glow -->
                     <div
                         class="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-[80px] rounded-full pointer-events-none group-hover:bg-primary/30 transition-colors duration-1000">
@@ -969,7 +1001,7 @@
     <!-- Final Epic CTA Section -->
     <section class="py-32 px-6 relative overflow-hidden mt-12 border-t border-outline-variant/10">
         <!-- Ethereal Background -->
-        <div class="absolute inset-0 bg-gradient-to-b from-[#0d0714] to-[#1a0e29]"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-[#1e112d] to-[#2b1845]"></div>
         <div
             class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,theme(colors.primary/0.15),transparent_70%)] rounded-full pointer-events-none mix-blend-screen">
         </div>
@@ -1018,7 +1050,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#05020a] border-t border-white/5 pt-20 pb-10 relative overflow-hidden">
+    <footer class="bg-[#140826] border-t border-white/5 pt-20 pb-10 relative overflow-hidden">
         <!-- Subtle footer glow -->
         <div
             class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1000px] h-[300px] bg-primary/5 blur-[100px] rounded-[100%] pointer-events-none translate-y-1/2">
@@ -1170,7 +1202,7 @@
                         </div>
                     </div>
                     <div>
-                        <h4 class="font-headline font-black text-white text-sm">Forge AI</h4>
+                        <h4 class="font-headline font-black text-white text-sm">Pitchsap Bot</h4>
                         <p class="text-[10px] text-green-400 font-bold uppercase tracking-widest">Online</p>
                     </div>
                 </div>
