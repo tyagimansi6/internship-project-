@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Welcome message in chat
             setTimeout(() => {
                 if(!chatOpenedBefore) {
-                    handleChatbotToggle(true);
+                    handleChatbotToggle(true, true);
                     addChatMessage(`Welcome back, <b>${userState.username}</b>! Let's validate your next big idea. What would you like to do?`, 'bot', true);
                     setTimeout(() => {
                         addOptions(["Validate my idea", "Check Pricing", "How it works"]);
@@ -209,12 +209,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatMessages = document.getElementById('chat-messages');
     let chatOpenedBefore = false;
 
-    function handleChatbotToggle(open) {
+    function handleChatbotToggle(open, isAutoGreeting = false) {
         if (!chatbotWindow) return;
         if (open) {
             chatbotWindow.classList.remove('hidden');
             chatbotWindow.classList.add('flex');
             chatbotBubble.classList.add('hidden');
+            
+            if (!chatOpenedBefore && !isAutoGreeting && chatMessages.children.length === 0) {
+                simulateBotResponse(() => {
+                    let nameStr = userState.isLoggedIn && userState.username ? ` <b>${userState.username}</b>` : '';
+                    addChatMessage(`Hello${nameStr}! I'm Pitchsap Bot. Ready to validate your next big idea?`, 'bot', true);
+                    setTimeout(() => {
+                        window.addOptions(["Validate my idea", "Check Pricing", "How it works"]);
+                    }, 400);
+                }, 400);
+            }
             chatOpenedBefore = true;
         } else {
             chatbotWindow.classList.add('hidden');
