@@ -94,13 +94,13 @@
             <div class="text-2xl font-black tracking-tighter text-[#ada3ff] font-headline">Pitchsap</div>
             <div class="hidden md:flex items-center space-x-8">
                 <a class="font-headline font-bold tracking-tight text-[#e1ccfa]/70 hover:text-[#e1ccfa] transition-colors"
-                    href="#">Product</a>
+                    href="#product">Product</a>
                 <a class="font-headline font-bold tracking-tight text-[#e1ccfa]/70 hover:text-[#e1ccfa] transition-colors"
-                    href="#">Expert Feedback</a>
+                    href="#expert">Expert Feedback</a>
                 <a class="font-headline font-bold tracking-tight text-[#e1ccfa]/70 hover:text-[#e1ccfa] transition-colors"
-                    href="#">Community</a>
+                    href="#community">Community</a>
                 <a class="font-headline font-bold tracking-tight text-[#e1ccfa]/70 hover:text-[#e1ccfa] transition-colors"
-                    href="#">Pricing</a>
+                    href="#pricing">Pricing</a>
             </div>
             <div id="nav-auth-buttons" class="hidden md:flex items-center space-x-4">
                 <button
@@ -120,10 +120,10 @@
         </div>
         <div id="mobile-menu"
             class="hidden md:hidden bg-surface-container-high/95 backdrop-blur-xl border-t border-outline-variant/20 flex-col pt-4 pb-6 px-8 absolute top-[100%] left-0 w-full shadow-2xl z-40">
-            <a class="block py-3 font-headline font-bold text-[#e1ccfa]/70" href="#">Product</a>
-            <a class="block py-3 font-headline font-bold text-[#e1ccfa]/70" href="#">Expert Feedback</a>
-            <a class="block py-3 font-headline font-bold text-[#e1ccfa]/70" href="#">Community</a>
-            <a class="block py-3 font-headline font-bold text-[#e1ccfa]/70" href="#">Pricing</a>
+            <a class="block py-3 font-headline font-bold text-[#e1ccfa]/70" href="#product">Product</a>
+            <a class="block py-3 font-headline font-bold text-[#e1ccfa]/70" href="#expert">Expert Feedback</a>
+            <a class="block py-3 font-headline font-bold text-[#e1ccfa]/70" href="#community">Community</a>
+            <a class="block py-3 font-headline font-bold text-[#e1ccfa]/70" href="#pricing">Pricing</a>
             <div class="mt-4 pt-4 border-t border-outline-variant/30 flex flex-col gap-3">
                 <button class="text-left py-2 font-headline font-bold text-[#e1ccfa] login-btn">Sign In / Get
                     Started</button>
@@ -207,21 +207,19 @@
 
                         <div class="relative z-10">
                             <!-- Header -->
-                            <div class="flex justify-between items-start mb-8 relative">
+                            <div class="flex items-start mb-8 relative">
                                 <div class="absolute -top-6 -left-6 z-50 animate-bounce" style="animation-duration: 3s">
                                     <span
-                                        class="material-symbols-outlined text-primary text-3xl drop-shadow-[0_0_10px_rgba(173,163,255,0.8)] -rotate-45">mouse</span>
+                                        class="material-symbols-outlined text-primary text-3xl drop-shadow-[0_0_10px_rgba(173,163,255,0.8)] -rotate-45">rocket_launch</span>
                                 </div>
-                                <div class="pl-4">
-                                    <p class="text-[10px] uppercase tracking-widest text-primary font-bold mb-2">
-                                        Analyzing Idea</p>
+                                <div class="pl-4 w-full">
                                     <h3
-                                        class="text-2xl lg:text-3xl font-headline font-black text-on-surface leading-tight">
-                                        AI Resume<br>Analyzer</h3>
+                                        class="text-2xl lg:text-3xl font-headline font-black text-on-surface leading-tight mb-3">
+                                        Your idea deserves momentum.</h3>
+                                    <p class="text-sm text-on-surface-variant leading-relaxed">
+                                        Pitchsap helps you refine, validate, and move forward with confidence through expert guidance, AI insights, and real founder feedback.
+                                    </p>
                                 </div>
-                                <span
-                                    class="bg-green-500/10 border border-green-500/30 text-green-400 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-wider shadow-[0_0_20px_rgba(74,222,128,0.3)]">High
-                                    Potential</span>
                             </div>
 
                             <!-- Stats Grid -->
@@ -493,7 +491,7 @@
 
     <!-- Removed inline styles and scripts (moved to style.css and script.js) -->
     <!-- Bento Grid Instrumentation -->
-    <section class="py-24 max-w-[85rem] mx-auto px-6 relative">
+    <section id="product" class="py-24 max-w-[85rem] mx-auto px-6 relative scroll-mt-10">
         <div
             class="absolute top-0 right-1/4 w-[500px] h-[500px] bg-primary/20 blur-[150px] rounded-full pointer-events-none mix-blend-screen">
         </div>
@@ -603,7 +601,7 @@
             </div>
 
             <!-- Medium Card : Expert Loop (Perspective Card) -->
-            <div class="md:col-span-4 md:row-span-2 rounded-[2rem] relative group [perspective:1000px]">
+            <div id="expert" class="md:col-span-4 md:row-span-2 rounded-[2rem] relative group [perspective:1000px] scroll-mt-32">
                 <div
                     class="absolute inset-0 glass-panel rounded-[2rem] border border-outline-variant/30 transition-transform duration-500 group-hover:[transform:rotateY(-5deg)_rotateX(5deg)] shadow-xl">
                 </div>
@@ -818,8 +816,34 @@
             </div>
         </div>
     </section>
+    <!-- Community Section -->
+    <section id="community" class="py-32 relative overflow-hidden bg-surface-container-low/50 border-y border-outline-variant/10 scroll-mt-10">
+        <div class="max-w-[85rem] mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl md:text-5xl font-headline font-black tracking-tight mb-6">Built by founders,<br>for founders.</h2>
+                <p class="text-on-surface-variant text-lg mb-8 leading-relaxed">Join a private network of 2,400+ visionary builders. Exchange beta tests, gather early feedback, and find your next co-founder in a signal-high, noise-low environment.</p>
+                <button class="px-8 py-4 bg-secondary text-surface font-headline font-bold rounded-xl hover:bg-secondary-fixed transition-colors flex items-center gap-2">
+                    Join Discord <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </button>
+            </div>
+            <div class="relative h-[400px] rounded-3xl border border-outline-variant/20 bg-[#12081e]/80 overflow-hidden flex items-center justify-center shadow-2xl glass-panel group">
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,theme(colors.secondary/0.1)_0%,transparent_70%)] group-hover:bg-[radial-gradient(ellipse_at_center,theme(colors.secondary/0.2)_0%,transparent_70%)] transition-colors duration-700"></div>
+                
+                <div class="relative w-full h-full flex items-center justify-center">
+                    <div class="absolute w-64 h-64 border border-secondary/20 rounded-full animate-[spin_20s_linear_infinite]"></div>
+                    <div class="absolute w-40 h-40 border border-secondary/40 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
+                    <span class="material-symbols-outlined text-6xl text-secondary drop-shadow-[0_0_15px_theme(colors.secondary)] animate-pulse">forum</span>
+                    
+                    <div class="absolute w-12 h-12 rounded-full overflow-hidden shadow-[0_0_15px_theme(colors.primary/40)] animate-[spin_10s_linear_infinite] [transform-origin:120px_120px] border-2 border-primary"><img src="https://i.pravatar.cc/100?img=12" class="w-full h-full object-cover"></div>
+                    <div class="absolute w-10 h-10 rounded-full overflow-hidden shadow-[0_0_15px_theme(colors.tertiary/40)] animate-[spin_15s_linear_infinite_reverse] [transform-origin:-100px_-80px] border-2 border-tertiary"><img src="https://i.pravatar.cc/100?img=43" class="w-full h-full object-cover"></div>
+                    <div class="absolute w-8 h-8 rounded-full overflow-hidden shadow-[0_0_12px_theme(colors.green.400/40)] animate-[spin_12s_linear_infinite] [transform-origin:-90px_100px] border-2 border-green-400"><img src="https://i.pravatar.cc/100?img=65" class="w-full h-full object-cover"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Pricing Section -->
-    <section class="py-32 max-w-[85rem] mx-auto px-6 relative">
+    <section id="pricing" class="py-32 max-w-[85rem] mx-auto px-6 relative scroll-mt-10">
         <!-- Glow Elements -->
         <div
             class="absolute top-1/2 left-0 w-96 h-96 bg-primary/10 blur-[150px] -translate-y-1/2 rounded-full pointer-events-none">

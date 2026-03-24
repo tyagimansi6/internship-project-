@@ -90,22 +90,52 @@ document.addEventListener('DOMContentLoaded', () => {
     const logoutBtn = document.getElementById('logout-btn');
 
     function updateUIAuthState() {
+        const mobileAuthContainer = document.querySelector('#mobile-menu .mt-4.pt-4');
+        const mobileLoginBtn = document.querySelector('#mobile-menu .login-btn');
+        
+        // Make sure we have a mobile logout button
+        let mobileLogoutBtn = document.getElementById('mobile-logout-btn');
+        if (!mobileLogoutBtn && mobileAuthContainer) {
+            mobileLogoutBtn = document.createElement('button');
+            mobileLogoutBtn.id = 'mobile-logout-btn';
+            mobileLogoutBtn.className = 'text-left py-2 font-headline font-bold text-error';
+            mobileLogoutBtn.textContent = 'Logout';
+            mobileLogoutBtn.style.display = 'none';
+            mobileLogoutBtn.addEventListener('click', () => {
+                if (logoutBtn) logoutBtn.click();
+            });
+            mobileAuthContainer.appendChild(mobileLogoutBtn);
+        }
+
         if (userState.isLoggedIn) {
             if(chatbotContainer) chatbotContainer.classList.remove('hidden');
-            if(navAuthButtons) navAuthButtons.classList.add('hidden');
+            if(navAuthButtons) {
+                navAuthButtons.style.setProperty('display', 'none', 'important');
+            }
             if(navUserButtons) {
                 navUserButtons.classList.remove('hidden');
                 navUserButtons.classList.add('flex');
+                navUserButtons.style.display = 'flex';
             }
             if(userNameDisplay) userNameDisplay.textContent = userState.username || 'Founder';
+            
+            if (mobileLoginBtn) mobileLoginBtn.style.display = 'none';
+            if (mobileLogoutBtn) mobileLogoutBtn.style.display = 'block';
+
         } else {
             if(chatbotContainer) chatbotContainer.classList.add('hidden');
-            if(navAuthButtons) navAuthButtons.classList.remove('hidden');
+            if(navAuthButtons) {
+                navAuthButtons.style.display = '';
+            }
             if(navUserButtons) {
                 navUserButtons.classList.add('hidden');
                 navUserButtons.classList.remove('flex');
+                navUserButtons.style.display = 'none';
             }
             handleChatbotToggle(false); // Close chat if open
+            
+            if (mobileLoginBtn) mobileLoginBtn.style.display = 'block';
+            if (mobileLogoutBtn) mobileLogoutBtn.style.display = 'none';
         }
     }
 
